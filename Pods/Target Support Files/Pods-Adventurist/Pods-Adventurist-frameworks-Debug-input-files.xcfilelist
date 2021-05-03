@@ -2,6 +2,7 @@ ${PODS_ROOT}/Target Support Files/Pods-Adventurist/Pods-Adventurist-frameworks.s
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/BRYXBanner/BRYXBanner.framework
 ${BUILT_PRODUCTS_DIR}/CariocaMenu/CariocaMenu.framework
+${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
 ${BUILT_PRODUCTS_DIR}/ElasticTransition/ElasticTransition.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework

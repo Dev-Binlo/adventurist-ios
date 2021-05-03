@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.2.2)
   - BRYXBanner (0.8.4)
   - CariocaMenu (1.1)
+  - DropDown (2.3.13)
   - ElasticTransition (3.0.1):
     - MotionAnimation (~> 0.1.1)
   - FBSDKCoreKit (7.1.1):
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - Alamofire
   - BRYXBanner
   - CariocaMenu (from `https://github.com/ronanamsterdam/cariocamenu.git`, branch `refac/swift5`)
+  - DropDown
   - ElasticTransition (from `https://github.com/ronanamsterdam/ElasticTransition.git`, branch `refac/swift5`)
   - FBSDKLoginKit
   - GoogleMaps
@@ -61,6 +63,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - BRYXBanner
+    - DropDown
     - FBSDKCoreKit
     - FBSDKLoginKit
     - GoogleMaps
@@ -112,6 +115,7 @@ SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   BRYXBanner: 4fbd266f96ce000e4c6cc9a0558c446bd88d9801
   CariocaMenu: b42c5117a217cb646b3e052148b764b6edb6eac5
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   ElasticTransition: 231e60fa66f68f42129e7969736f4a9e69794f97
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
@@ -129,6 +133,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 9d72410c15a0f5653d587e956aa40fac4c951ab1
+PODFILE CHECKSUM: 33da13e6687beaaab87039e9d2f1058a40d39c32
 
 COCOAPODS: 1.10.1

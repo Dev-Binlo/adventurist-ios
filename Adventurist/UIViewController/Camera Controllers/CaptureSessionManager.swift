@@ -925,85 +925,21 @@ AVCaptureAudioDataOutputSampleBufferDelegate {
         if error == nil {
             //coz you need to run UIKit opeartions on main thread
             
-//            if let controller = self.storyboardMain.instantiateViewController(withIdentifier: UploadPhotoVC.identifier) as? UploadPhotoVC {
-//                controller.modalPresentationStyle = .fullScreen
-//                UIViewController().present(controller, animated: true)
-//            }
-//
+            
+       
+            UploadSession.imagetoUpload = savedImage
+            UploadSession.shutter = String(self.shutterValue)
+            UploadSession.isoSpeed = String(self.isoValue)
+            UploadSession.temprature = String(self.temperatureValue)
+            UploadSession.subjectDistance = String(self.focusDistance)
+            UploadSession.aperture = String(self.self.captureDevice?.lensAperture ?? 0.0)
+            UploadSession.flashMode = String(self.self.captureDevice?.isFlashAvailable ?? false)
+            UploadSession.cameraType = String(self.self.captureDevice?.localizedName ?? "")
             
             NotificationCenter.default.post(name: Notification.Name("photoCaptured"), object: nil)
-//
-//            
-//            print(self.shutterValue)
-//            print(self.isoValue)
-//            print(self.temperatureValue)
-//            print(self.focusDistance)
-//            print(self.captureDevice?.exposureMode.rawValue  ?? 0)
-//            print(self.captureDevice?.deviceType.rawValue ?? "")
-//            
-//            print(self.captureDevice?.activeColorSpace.rawValue  ?? 0)
-//            print(self.captureDevice?.activeFormat.autoFocusSystem)
-//            print(self.captureDevice?.activeFormat.formatDescription)
-//            print(self.captureDevice?.activeFormat.geometricDistortionCorrectedVideoFieldOfView)
-//            print(self.captureDevice?.activeFormat.highResolutionStillImageDimensions)
-//            print(self.captureDevice?.activeFormat.isGlobalToneMappingSupported)
-//            print(self.captureDevice?.activeFormat.isHighestPhotoQualitySupported)
-//            print(self.captureDevice?.activeFormat.isMultiCamSupported)
-//            print(self.captureDevice?.activeFormat.isPortraitEffectsMatteStillImageDeliverySupported)
-//            print(self.captureDevice?.activeFormat.maxExposureDuration)
-//            print(self.captureDevice?.activeFormat.minExposureDuration)
-//            print(self.captureDevice?.activeFormat.mediaType)
-//            print(self.captureDevice?.activeFormat.supportedColorSpaces)
-//            print(self.captureDevice?.activeFormat.supportedDepthDataFormats)
-//            print(self.captureDevice?.activeFormat.unsupportedCaptureOutputClasses)
-//            
-//            print(self.captureDevice?.exposureTargetBias)
-//            print(self.captureDevice?.activeMaxExposureDuration)
-//            print(self.captureDevice?.exposureMode)
-//            print(self.captureDevice?.exposurePointOfInterest)
-//            print(self.captureDevice?.isLowLightBoostEnabled)
-//            print(self.captureDevice?.iso)
-//            print(self.captureDevice?.localizedName)
-//            print(self.captureDevice?.lensPosition)
-//            print(self.captureDevice?.systemPressureState)
-//            print(self.captureDevice?.uniqueID)
-//            if #available(iOS 11.0, *) {
-//                print(self.captureDevice?.activeDepthDataFormat)
-//            } else {
-//                // Fallback on earlier versions
-//            }
-//            if #available(iOS 14.0, *) {
-//                print(self.captureDevice?.manufacturer.capitalizingFirstLetter())
-//            } else {
-//                // Fallback on earlier versions
-//            }
-//            if #available(iOS 12.0, *) {
-//                print(self.captureDevice?.activeDepthDataMinFrameDuration.epoch)
-//            } else {
-//                // Fallback on earlier versions
-//            }
-//            print(self.captureDevice?.exposureDuration.seconds)
-//            print(self.captureDevice?.focusMode.rawValue)
-//            print(self.captureDevice?.lensAperture.bitPattern)
-//            print(self.captureDevice?.lensAperture.binade)
-//           
-//            print(self.captureDevice?.lensPosition.ulp)
-//            print(self.captureDevice?.deviceWhiteBalanceGains)
-//            
-
             
-            DispatchQueue.main.async {
-                let banner = Banner(
-                    title: "Awesome!",
-                    subtitle: "You made a picture! \(self.focusDistance) \(self.shutterStringValue) \(self.isoValue)",
-                    // todo
-                    // works locally but this needs to be merged:
-                    // https://github.com/bryx-inc/BRYXBanner/pull/48
-                    image: savedImage,
-                    backgroundColor: UIColor(red:13.00/255.0, green:13.0/255.0, blue:13.5/255.0, alpha:0.500))
-                banner.dismissesOnTap = true
-                banner.show(duration: 5.0)
-            }
+            
+            
         } else {
 
             //coz you need to run UIKit opeartions on main thread
