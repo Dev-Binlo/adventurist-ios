@@ -125,16 +125,6 @@
 		79C00597251DD1E60056D6D9 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C00539251DD1E60056D6D9 /* ResetPasswordVC.swift */; };
 		79C00599251DD1E60056D6D9 /* ForgotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C0053B251DD1E60056D6D9 /* ForgotVC.swift */; };
 		79C0059C251DD2280056D6D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C0059B251DD2280056D6D9 /* Assets.xcassets */; };
-		79DA9231264018A4000D9C3F /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DA9224264018A4000D9C3F /* DropDownCell.xib */; };
-		79DA9232264018A4000D9C3F /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA9226264018A4000D9C3F /* DPDKeyboardListener.swift */; };
-		79DA9233264018A4000D9C3F /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA9227264018A4000D9C3F /* DPDConstants.swift */; };
-		79DA9234264018A4000D9C3F /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA9228264018A4000D9C3F /* DPDUIView+Extension.swift */; };
-		79DA9235264018A4000D9C3F /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA922A264018A4000D9C3F /* DropDown.swift */; };
-		79DA9236264018A4000D9C3F /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA922B264018A4000D9C3F /* DropDownCell.swift */; };
-		79DA9237264018A4000D9C3F /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA922C264018A4000D9C3F /* DropDown+Appearance.swift */; };
-		79DA9238264018A4000D9C3F /* UIDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA922D264018A4000D9C3F /* UIDropDown.swift */; };
-		79DA9239264018A4000D9C3F /* RoamingDropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DA922F264018A4000D9C3F /* RoamingDropDownCell.xib */; };
-		79DA923A264018A4000D9C3F /* RoamingDropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA9230264018A4000D9C3F /* RoamingDropDownCell.swift */; };
 		E8BAEF31A6178343A286B379 /* Pods_Adventurist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB55E50D3C5C537B65E3324E /* Pods_Adventurist.framework */; };
 /* End PBXBuildFile section */
 
@@ -261,16 +251,6 @@
 		79C0053B251DD1E60056D6D9 /* ForgotVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotVC.swift; sourceTree = "<group>"; };
 		79C0059B251DD2280056D6D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79C0059D251DD2C70056D6D9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79DA9224264018A4000D9C3F /* DropDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownCell.xib; sourceTree = "<group>"; };
-		79DA9226264018A4000D9C3F /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDKeyboardListener.swift; sourceTree = "<group>"; };
-		79DA9227264018A4000D9C3F /* DPDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDConstants.swift; sourceTree = "<group>"; };
-		79DA9228264018A4000D9C3F /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DPDUIView+Extension.swift"; sourceTree = "<group>"; };
-		79DA922A264018A4000D9C3F /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
-		79DA922B264018A4000D9C3F /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
-		79DA922C264018A4000D9C3F /* DropDown+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
-		79DA922D264018A4000D9C3F /* UIDropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropDown.swift; sourceTree = "<group>"; };
-		79DA922F264018A4000D9C3F /* RoamingDropDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoamingDropDownCell.xib; sourceTree = "<group>"; };
-		79DA9230264018A4000D9C3F /* RoamingDropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoamingDropDownCell.swift; sourceTree = "<group>"; };
 		CB55E50D3C5C537B65E3324E /* Pods_Adventurist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adventurist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C9D0E8F8EEE4C696C34350 /* Pods-Adventurist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adventurist.release.xcconfig"; path = "Target Support Files/Pods-Adventurist/Pods-Adventurist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -777,67 +757,9 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		79DA9221264018A4000D9C3F /* UIDropDown */ = {
-			isa = PBXGroup;
-			children = (
-				79DA9222264018A4000D9C3F /* DropDown */,
-				79DA922D264018A4000D9C3F /* UIDropDown.swift */,
-				79DA922E264018A4000D9C3F /* RoamingCell */,
-			);
-			path = UIDropDown;
-			sourceTree = "<group>";
-		};
-		79DA9222264018A4000D9C3F /* DropDown */ = {
-			isa = PBXGroup;
-			children = (
-				79DA9223264018A4000D9C3F /* resources */,
-				79DA9225264018A4000D9C3F /* helpers */,
-				79DA9229264018A4000D9C3F /* src */,
-			);
-			path = DropDown;
-			sourceTree = "<group>";
-		};
-		79DA9223264018A4000D9C3F /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				79DA9224264018A4000D9C3F /* DropDownCell.xib */,
-			);
-			path = resources;
-			sourceTree = "<group>";
-		};
-		79DA9225264018A4000D9C3F /* helpers */ = {
-			isa = PBXGroup;
-			children = (
-				79DA9226264018A4000D9C3F /* DPDKeyboardListener.swift */,
-				79DA9227264018A4000D9C3F /* DPDConstants.swift */,
-				79DA9228264018A4000D9C3F /* DPDUIView+Extension.swift */,
-			);
-			path = helpers;
-			sourceTree = "<group>";
-		};
-		79DA9229264018A4000D9C3F /* src */ = {
-			isa = PBXGroup;
-			children = (
-				79DA922A264018A4000D9C3F /* DropDown.swift */,
-				79DA922B264018A4000D9C3F /* DropDownCell.swift */,
-				79DA922C264018A4000D9C3F /* DropDown+Appearance.swift */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		79DA922E264018A4000D9C3F /* RoamingCell */ = {
-			isa = PBXGroup;
-			children = (
-				79DA922F264018A4000D9C3F /* RoamingDropDownCell.xib */,
-				79DA9230264018A4000D9C3F /* RoamingDropDownCell.swift */,
-			);
-			path = RoamingCell;
-			sourceTree = "<group>";
-		};
 		79F9AF662640116300011120 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				79DA9221264018A4000D9C3F /* UIDropDown */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -928,7 +850,6 @@
 				79C00590251DD1E60056D6D9 /* StripsTC.xib in Resources */,
 				79C00582251DD1E60056D6D9 /* NearByCell.xib in Resources */,
 				79C0053C251DD1E60056D6D9 /* LoginSignup.storyboard in Resources */,
-				79DA9239264018A4000D9C3F /* RoamingDropDownCell.xib in Resources */,
 				79C00583251DD1E60056D6D9 /* LocationCell.xib in Resources */,
 				79C0053E251DD1E60056D6D9 /* Main.storyboard in Resources */,
 				79C0058A251DD1E60056D6D9 /* GalleryTC.xib in Resources */,
@@ -939,7 +860,6 @@
 				79C0056E251DD1E60056D6D9 /* PacksTC.xib in Resources */,
 				79C00570251DD1E60056D6D9 /* SpecsTC.xib in Resources */,
 				79C00568251DD1E60056D6D9 /* SettingTC.xib in Resources */,
-				79DA9231264018A4000D9C3F /* DropDownCell.xib in Resources */,
 				79C0056D251DD1E60056D6D9 /* PackSubCell.xib in Resources */,
 				79C00574251DD1E60056D6D9 /* TipsTC.xib in Resources */,
 				79C00578251DD1E60056D6D9 /* PhotosTC.xib in Resources */,
@@ -1037,7 +957,6 @@
 				79C00563251DD1E60056D6D9 /* SubDetailedModel.swift in Sources */,
 				79C00542251DD1E60056D6D9 /* String.swift in Sources */,
 				79C00581251DD1E60056D6D9 /* NearByCell.swift in Sources */,
-				79DA9236264018A4000D9C3F /* DropDownCell.swift in Sources */,
 				6CD91976261637E3002C7300 /* RightMenuSetViewController.swift in Sources */,
 				79C0055C251DD1E60056D6D9 /* ExploreModel.swift in Sources */,
 				6CD91978261637E3002C7300 /* CameraMenuContentController.swift in Sources */,
@@ -1053,7 +972,6 @@
 				2F31955E2578AA7A0043487B /* Picture.swift in Sources */,
 				2F3195602578AA7A0043487B /* UserCategoryModel.swift in Sources */,
 				79C00599251DD1E60056D6D9 /* ForgotVC.swift in Sources */,
-				79DA923A264018A4000D9C3F /* RoamingDropDownCell.swift in Sources */,
 				79C0055E251DD1E60056D6D9 /* FilterModel.swift in Sources */,
 				79C00585251DD1E60056D6D9 /* SearchVC.swift in Sources */,
 				6CD91974261637E3002C7300 /* GridManager.swift in Sources */,
@@ -1076,7 +994,6 @@
 				79C00494251DD08A0056D6D9 /* AppDelegate.swift in Sources */,
 				79C0054D251DD1E60056D6D9 /* ViewX.swift in Sources */,
 				79C0056C251DD1E60056D6D9 /* PackSubCell.swift in Sources */,
-				79DA9234264018A4000D9C3F /* DPDUIView+Extension.swift in Sources */,
 				79748F972524658800C4D299 /* RPicker.swift in Sources */,
 				79C00556251DD1E60056D6D9 /* LinearProgressView.swift in Sources */,
 				2F3195612578AA7A0043487B /* UserBookmark.swift in Sources */,
@@ -1084,13 +1001,10 @@
 				79C00579251DD1E60056D6D9 /* PhotosTC.swift in Sources */,
 				6CD91972261637E3002C7300 /* MenuHostView.swift in Sources */,
 				79C00595251DD1E60056D6D9 /* VerifyEmailVC.swift in Sources */,
-				79DA9233264018A4000D9C3F /* DPDConstants.swift in Sources */,
-				79DA9235264018A4000D9C3F /* DropDown.swift in Sources */,
 				79C00591251DD1E60056D6D9 /* LocationsVC.swift in Sources */,
 				79C0055D251DD1E60056D6D9 /* LoginModel.swift in Sources */,
 				79C00540251DD1E60056D6D9 /* GlobalFunctions.swift in Sources */,
 				6CD91971261637E3002C7300 /* SecondViewController.swift in Sources */,
-				79DA9238264018A4000D9C3F /* UIDropDown.swift in Sources */,
 				79C00567251DD1E60056D6D9 /* DetailModel.swift in Sources */,
 				79AF1E4E263DEE040075A18E /* ProgressLoader.swift in Sources */,
 				79C0054E251DD1E60056D6D9 /* TabbarX.swift in Sources */,
@@ -1105,7 +1019,6 @@
 				79C0054C251DD1E60056D6D9 /* SliderX.swift in Sources */,
 				2F3195392578A2FF0043487B /* CategoriesVC.swift in Sources */,
 				79C00546251DD1E60056D6D9 /* CustomCollectionViewLayouts.swift in Sources */,
-				79DA9237264018A4000D9C3F /* DropDown+Appearance.swift in Sources */,
 				79C00544251DD1E60056D6D9 /* Activity.swift in Sources */,
 				79C00584251DD1E60056D6D9 /* LocationCell.swift in Sources */,
 				79C00569251DD1E60056D6D9 /* SettingTC.swift in Sources */,
@@ -1115,7 +1028,6 @@
 				79C0057C251DD1E60056D6D9 /* IntroTC.swift in Sources */,
 				79C0057A251DD1E60056D6D9 /* TransportationTC.swift in Sources */,
 				79C0054A251DD1E60056D6D9 /* LocationManager.swift in Sources */,
-				79DA9232264018A4000D9C3F /* DPDKeyboardListener.swift in Sources */,
 				79C00594251DD1E60056D6D9 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 import UIKit
 import GooglePlaces
+import DropDown
 
 class UploadPhotoVC: UIViewController {
     
@@ -17,23 +18,24 @@ class UploadPhotoVC: UIViewController {
     //MARK: IBOutlets...
     
     @IBOutlet weak var imagepPickedd: UIImageView!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var categryDD: UIDropDown!
+    
+    @IBOutlet weak var categryTF: UITextField!
+    @IBOutlet weak var categryView: UIView!
+    
+    @IBOutlet weak var accessibilityTF: UITextField!
+    
     @IBOutlet weak var searchPlaceTF:  UITextField!
-    
-    
-//    @IBOutlet weak var tableView: UITableView!
-//    @IBOutlet weak var tableView: UITableView!
-    
-//    @IBOutlet weak var tableView: UITableView!
-    
-    
     
     //MARK: Properties....
     
     let autocompleteController = GMSAutocompleteViewController()
     
-    var  selectedCategory : FilterModel?
+    var accessibilityDD = DropDown()
+    var selectedAccessibility : String?
+    
+    var categryDD = DropDown()
+    var selectedCategory : [FilterModel]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,31 +51,84 @@ class UploadPhotoVC: UIViewController {
             tap.numberOfTapsRequired = 1
             searchPlaceTF.addGestureRecognizer(tap)
         }
-        
-        setUpDropdown()
+        setUpLayout()
     }
     
+    
+    
+    func setUpLayout(){
+        imagepPickedd.image = UploadSession.imagetoUpload
+        
+        
+    }
     
     
     
     //Dropdown
     
-    func setUpDropdown(){
-        self.categryDD.dataSource = UserSession.generalFilters.sorted(by: { $0.name < $1.name }).map({ $0.name})
-        self.categryDD.placeholder = "Choose Category"
-        self.categryDD.didSelectOption { (index, option) in
-            self.selectedCategory = UserSession.generalFilters[index]
-        }
-    }
+//    func setUpDropdown(){
+//
+//        self.categryDD.dataSource = UserSession.generalFilters.sorted(by: { $0.name < $1.name }).map({ $0.name})
+//        self.categryDD.placeholder = "Choose Category"
+//        self.categryDD.didSelectOption { (index, option) in
+//            self.selectedCategory = UserSession.generalFilters[index]
+//        }
+//    }
     
+    
+   
+     func setUpAccessibilityDropdown(){
+         
+         
+        self.accessibilityDD.textFont = UIFont.systemFont(ofSize: 11)
+        self.accessibilityDD.dismissMode = .onTap
+        self.accessibilityDD.anchorView = self.accessibilityTF
+        self.accessibilityDD.direction = .any
+        self.accessibilityDD.topOffset = CGPoint(x: 0, y: -(self.accessibilityDD.anchorView?.plainView.bounds.height)!)
+        self.accessibilityDD.bottomOffset = CGPoint(x: 0, y:(self.accessibilityDD.anchorView?.plainView.bounds.height)!)
+        self.accessibilityDD.width = self.accessibilityTF.frame.width
+        self.accessibilityDD.dataSource = ["public-area","private-area","restricted-area"]
+        self.accessibilityDD.selectionAction = {[unowned self] (index: Int, item: String) in
+            print(item)
+            self.accessibilityTF.text = item
+        }
+        self.accessibilityDD.show()
+        
+     }
+     
+    
+     func setupCategoryDD(){
+         
+        self.categryDD.textFont = UIFont.systemFont(ofSize: 11)
+        self.categryDD.dismissMode = .onTap
+        self.categryDD.anchorView = self.categryView
+        self.categryDD.direction = .any
+        self.categryDD.topOffset = CGPoint(x: 0, y: -(self.categryDD.anchorView?.plainView.bounds.height)!)
+        self.categryDD.bottomOffset = CGPoint(x: 0, y:(self.categryDD.anchorView?.plainView.bounds.height)!)
+        self.categryDD.width = self.categryView.frame.width
+        self.categryDD.dataSource = UserSession.generalFilters.sorted(by: { $0.name < $1.name }).map({ $0.name})
+        self.categryDD.multiSelectionAction = { [unowned self] (index: [Int], items: [String]) in
+        
+        }
+        self.categryDD.show()
+         
+     }
+     
     
 }
-
 
 //MARK: IBACTIONS....
 
 extension UploadPhotoVC{
     
+    
+    
+    @IBAction func selectCategoryBtn(_ sender : UIButton){
+        self.setupCategoryDD()
+    }
+    @IBAction func selectAccessibilityBtn(_ sender : UIButton){
+        self.setUpAccessibilityDropdown()
+    }
 
     @IBAction func backBtn(_ sender: UIBarButtonItem){
         self.pushBack()
@@ -87,7 +142,7 @@ extension UploadPhotoVC{
             return
         }
         
-        if !self.categryDD.isSelected{
+        if self.selectedCategory?.count ?? 0 <= 0{
             self.ShowAlert(message: "Please choose category")
             return
         }
@@ -154,48 +209,3 @@ extension UploadPhotoVC: GMSAutocompleteViewControllerDelegate {
     }
     
 }
-
-
-
-
-
-/*
- user_id
- image_date
- full_address
- plot_no
- street_address
- city
- state
- country
- zip
- lat
- lng
-
- category_id = array()
-
- skill_level
- accessibility
- fee
- start_hours
- end_hours
- tips
-
- camera_id
- camera_model_id
- lens
- focal_stop
- focal_length
- resolution
- bit_depth
- color_representation
- exposure_time
- iso_speed
- flash_mode
- aperture
- subject_distance
- 
- 
- 
-
- */

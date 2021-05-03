@@ -12,7 +12,7 @@ target 'Adventurist' do
 	pod 'Kingfisher'
 	pod 'IQKeyboardManagerSwift'
 	pod 'SkyFloatingLabelTextField'
-
+  pod 'DropDown'
 	pod 'FBSDKLoginKit'
 	pod 'GoogleMaps'
 	pod 'GooglePlaces'
