@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NearByCell" id="gTV-IL-0wX" customClass="NearByCell" customModule="Adventurist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="159" height="25"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="159" height="25"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwL-z7-9ps" customClass="ViewX" customModule="Adventurist" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="159" height="25"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRj-Oh-hgs" customClass="LabelX" customModule="Adventurist" customModuleProvider="target">
+                                <rect key="frame" x="8" y="4" width="143" height="17"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iRj-Oh-hgs" secondAttribute="trailing" constant="8" id="5KG-CD-Pme"/>
+                            <constraint firstAttribute="height" constant="25" id="Wx8-t0-0FM"/>
+                            <constraint firstItem="iRj-Oh-hgs" firstAttribute="leading" secondItem="PwL-z7-9ps" secondAttribute="leading" constant="8" id="XHd-66-lCX"/>
+                            <constraint firstItem="iRj-Oh-hgs" firstAttribute="top" secondItem="PwL-z7-9ps" secondAttribute="top" constant="4" id="bbY-fs-5Af"/>
+                            <constraint firstAttribute="bottom" secondItem="iRj-Oh-hgs" secondAttribute="bottom" constant="4" id="rPj-1g-ybr"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="PwL-z7-9ps" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Sh1-ro-xgR"/>
+                <constraint firstAttribute="bottom" secondItem="PwL-z7-9ps" secondAttribute="bottom" id="W4d-8F-PM9"/>
+                <constraint firstItem="PwL-z7-9ps" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dFI-Tp-8SV"/>
+                <constraint firstAttribute="trailing" secondItem="PwL-z7-9ps" secondAttribute="trailing" id="qNW-qm-6Jc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="159" height="47"/>
+            <connections>
+                <outlet property="bg" destination="PwL-z7-9ps" id="cXf-ih-7hD"/>
+                <outlet property="nearbyLabel" destination="iRj-Oh-hgs" id="Fn0-t8-0Lp"/>
+            </connections>
+            <point key="canvasLocation" x="158.69565217391306" y="115.51339285714285"/>
+        </collectionViewCell>
+    </objects>
+</document>

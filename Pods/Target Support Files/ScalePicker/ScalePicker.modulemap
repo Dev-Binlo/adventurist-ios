@@ -1,0 +1,6 @@
+framework module ScalePicker {
+  umbrella header "ScalePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

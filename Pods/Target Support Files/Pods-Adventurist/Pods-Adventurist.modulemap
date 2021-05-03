@@ -1,0 +1,6 @@
+framework module Pods_Adventurist {
+  umbrella header "Pods-Adventurist-umbrella.h"
+
+  export *
+  module * { export * }
+}

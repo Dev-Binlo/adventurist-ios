@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StripItemCC" id="gTV-IL-0wX" customClass="StripItemCC" customModule="Adventurist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="184" height="40"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOe-LG-gsF" customClass="ViewX" customModule="Adventurist" customModuleProvider="target">
+                        <rect key="frame" x="4" y="0.0" width="180" height="40"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="C3k-Ta-efc">
+                                <rect key="frame" x="12" y="5" width="156" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6Y-kq-Ehe">
+                                        <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.96939128640000005" green="0.9695302844" blue="0.96936088799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCn-Vx-CXZ" customClass="ButtonY" customModule="Adventurist" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.96939128640000005" green="0.9695302844" blue="0.96936088799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="J3F-iL-HJp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="20">
+                                            <color key="titleColor" red="0.47062152619999997" green="0.0" blue="0.72146105770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47062152619999997" green="0.0" blue="0.72146105770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="C3k-Ta-efc" secondAttribute="trailing" constant="12" id="BP0-WH-Pya"/>
+                            <constraint firstAttribute="bottom" secondItem="C3k-Ta-efc" secondAttribute="bottom" constant="5" id="K1D-Gr-Qhv"/>
+                            <constraint firstItem="C3k-Ta-efc" firstAttribute="top" secondItem="xOe-LG-gsF" secondAttribute="top" constant="5" id="fp8-uD-f27"/>
+                            <constraint firstItem="C3k-Ta-efc" firstAttribute="leading" secondItem="xOe-LG-gsF" secondAttribute="leading" constant="12" id="xMS-Ww-9vt"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="xOe-LG-gsF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="5n0-3s-t7p"/>
+                <constraint firstAttribute="trailing" secondItem="xOe-LG-gsF" secondAttribute="trailing" id="Df1-t7-l4D"/>
+                <constraint firstItem="xOe-LG-gsF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ljm-6I-kKG"/>
+                <constraint firstAttribute="bottom" secondItem="xOe-LG-gsF" secondAttribute="bottom" id="zlO-78-QsK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="184" height="40"/>
+            <connections>
+                <outlet property="bgView" destination="xOe-LG-gsF" id="ILb-bw-EmV"/>
+                <outlet property="counts" destination="HCn-Vx-CXZ" id="Ngj-5O-wy1"/>
+                <outlet property="txtLabel" destination="t6Y-kq-Ehe" id="f1f-oL-Cel"/>
+            </connections>
+            <point key="canvasLocation" x="39.130434782608695" y="90.401785714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>
