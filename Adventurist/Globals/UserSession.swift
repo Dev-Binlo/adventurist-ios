@@ -30,8 +30,8 @@ class UploadSession {
     /*** Location */
     static var address : String? = ""
     static var fullAddress : String? = ""
-    static var plot_no : String? = ""
-    static var street_address : String? = ""
+    static var plotNo : String? = ""
+    static var streetAddress : String? = ""
     static var city : String? = ""
     static var state : String? = ""
     static var country : String? = ""
