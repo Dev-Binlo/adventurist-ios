@@ -17,8 +17,11 @@ class NetworkController {
     
     static let shared = NetworkController()
     
+    //FIXME: Live
     var baseUrl = "http://adventurist-env.eba-ksni68ph.ap-east-1.elasticbeanstalk.com/api/"
-//    var baseUrl = "https://dev.foodofpakistan.com/adventurist/public/api/"
+
+    //FIXME: Stg
+//    var baseUrl = "http://adventurist.plandstudios.com/api/"
     
     /// onComplition-> JSON is json response
     ///and 0 == failed due to invalid parameters
@@ -88,15 +91,19 @@ class NetworkController {
     
     
     
-    func UploadPicture(_ view: UIViewController?,params: [String: Any], imageFile: UIImage?, endPoint name: WebServices?  =  .addPicture, isFormDataa: Bool, onComplition: @escaping (JSON, Int) -> Void) {
+    func UploadPicture(_ view: UIViewController?,params: [String: Any], imageFile: UIImage?, endPoint name: WebServices  =  .addPicture, isFormDataa: Bool, onComplition: @escaping (JSON, Int) -> Void) {
         if InternetAvailabilty.isInternetAvailable(){
             
-            let url = "\(self.baseUrl)\(name!.rawValue)"
+            let url = "\(self.baseUrl)\(name.rawValue)"
             let headers: HTTPHeaders = [
                 "Content-type": "multipart/form-data",
-                "Accept" : "application/x-www-form-urlencoded",
+                "Accept" : "application/json",
                 "Authorization": "Bearer \(UserSession.loginSession?.token! ?? "")",
             ]
+            
+            print("=============>>>>>>> Parameters{ \n \(params) \n }")
+            print("=============>>>>>>> Headers{ \n \(headers) \n }")
+            
             view?.addActivityLoader()
             AF.upload(multipartFormData: { (multiPart) in
                 
@@ -105,16 +112,14 @@ class NetworkController {
                 }
                 
                 if let  image  = imageFile{
-                    multiPart.append(image.jpegData(compressionQuality: 0.7) ?? Data(), withName: "image", fileName: "adventurist_\(Date().timeIntervalSince1970).png", mimeType: "image/png")
+                    multiPart.append(image.jpegData(compressionQuality: 1.0) ?? Data(), withName: "image", fileName: "adventurist_\(Date().timeIntervalSince1970).png", mimeType: "image/png")
                 }
-                
-                
+                                
             }, to: url, usingThreshold: UInt64.init(), method: .post, headers: headers).uploadProgress { (progress) in
+                
                 view?.removeActivityLoader()
                 view?.Uploader(with: Float(progress.fractionCompleted))
-                print(progress.fractionCompleted)
                 let prog = Int(progress.fractionCompleted * 100)
-                print("✅✅✅✅✅✅✅✅ \(prog)✅✅✅✅")
                 if prog == 100{
                     view?.removeUploader()
                     view?.addActivityLoader()

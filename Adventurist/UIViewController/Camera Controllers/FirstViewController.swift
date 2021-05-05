@@ -674,8 +674,8 @@ class FirstViewController:
     private func disableUi(_ areAnyStatesNotDetermined: Bool = false) {
         doPhotoBtn.isEnabled = false
         doPhotoBtn.alpha = 0.4
-        doVideoBtn.isEnabled = false
-        doVideoBtn.alpha = 0.4
+//        doVideoBtn.isEnabled = false
+//        doVideoBtn.alpha = 0.4
         cameraSecondaryOptions?.view.isHidden = true
         cameraResolutionSideMenu?.view.isHidden = true
         if (!areAnyStatesNotDetermined) {
