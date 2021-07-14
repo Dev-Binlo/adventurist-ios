@@ -14,7 +14,7 @@ class UploadPhotoVC: UIViewController {
     
     static  let identifier = "UploadPhotoVC"
     
-    
+    let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
     //MARK: IBOutlets...
     
     @IBOutlet weak var imagepPickedd: UIImageView!
@@ -55,7 +55,7 @@ class UploadPhotoVC: UIViewController {
     var selectedAccessibility : String?
     
     var categryDD = DropDown()
-    var selectedCategory : [FilterModel]?
+    var selectedCategory : [Int]?
     
     
     let datePicker = UIDatePicker()
@@ -152,6 +152,7 @@ class UploadPhotoVC: UIViewController {
         self.accessibilityDD.selectionAction = {[unowned self] (index: Int, item: String) in
             print(item)
             self.accessibilityTF.text = item
+            UploadSession.accessibility = item
         }
         self.accessibilityDD.show()
         
@@ -169,7 +170,11 @@ class UploadPhotoVC: UIViewController {
         self.categryDD.width = self.categryTF.frame.width
         self.categryDD.dataSource = UserSession.generalFilters.sorted(by: { $0.name < $1.name }).map({ $0.name})
         self.categryDD.multiSelectionAction = { [unowned self] (index: [Int], items: [String]) in
-        
+            self.selectedCategory?.removeAll()
+            self.categryTF.text = ""
+            self.selectedCategory = index
+            let item = items.map({$0}).joined(separator: ",")
+            self.categryTF.text = item
         }
         self.categryDD.show()
          
@@ -206,12 +211,61 @@ extension UploadPhotoVC{
             self.ShowAlert(message: "Please choose category")
             return
         }
+        if UploadSession.imagetoUpload == nil{
+            self.ShowAlert(message: "Please add image")
+            return
+        }
+        
+        UploadSession.skillLevel = self.skillLevelTF.text ?? ""
+        UploadSession.fee = self.feeTF.text ?? ""
+        UploadSession.tips = self.tipsTF.text ?? ""
 
         
-        NetworkController.shared.UploadPicture(self, params: ["skill_level":"fgdgfd"], imageFile: #imageLiteral(resourceName: "29i"), endPoint: .addPicture, isFormDataa: false) { (json, status) in
-            if  status == 0 {
-                print("json")
-                self.ShowAlert(message: "\(json)")
+        let params : [String: Any] = [
+            
+            "image_date": "\(Date().timeIntervalSinceNow)",
+            "full_address": UploadSession.fullAddress ?? "",
+            "plot_no": UploadSession.plotNo ?? "",
+            "street_address":  UploadSession.streetAddress ?? "",
+            "city":  UploadSession.city ?? "",
+            "state":  UploadSession.state ?? "",
+            "country":  UploadSession.country ?? "",
+            "zip":  UploadSession.zip ?? "",
+            "lat":  UploadSession.lat ?? "",
+            "lng":  UploadSession.lng ?? "",
+            "category_id":  self.selectedCategory ?? "",
+            "skill_level":  UploadSession.skillLevel ?? "",
+            "accessibility":  UploadSession.accessibility ?? "",
+            "fee":  UploadSession.fee ?? "",
+            "start_hours":  UploadSession.startHours ?? "",
+            "end_hours":  UploadSession.endHours ?? "",
+            "tips": UploadSession.tips ?? "",
+            "camera_id": "19",
+            "camera_model_id": UploadSession.cameraModelId ?? "",
+            "lens": UploadSession.lens ?? "",
+            "focal_stop":UploadSession.focalStop ?? "",
+            "focal_length": UploadSession.focalLength ?? "",
+            "resolution": UploadSession.resolution ?? "",
+            "bit_depth": UploadSession.bitDepth ?? "",
+            "color_representation": UploadSession.colorRepresentation ?? "",
+            "exposure_time": UploadSession.exposureTime ?? "",
+            "iso_speed": UploadSession.isoSpeed ?? "",
+            "flash_mode": UploadSession.flashMode ?? "",
+            "aperture": UploadSession.aperture ?? "",
+            "subject_distance":UploadSession.subjectDistance ?? "",
+            "temprature": UploadSession.temprature ?? "",
+            "shutter": UploadSession.shutter ?? "",
+            "camera_type": UploadSession.cameraType ?? ""
+            
+        ]
+        
+        NetworkController.shared.UploadPicture(self, params: params, imageFile: UploadSession.imagetoUpload, endPoint: .addPicture, isFormDataa: false) { (json, status) in
+            if  status == 1 {
+                print(json)
+                if let tabViewController = self.storyboardMain.instantiateViewController(withIdentifier: "tabbar") as? UITabBarController {
+                    tabViewController.modalPresentationStyle = .fullScreen
+                    self.present(tabViewController, animated: true, completion: nil)
+                }
                 
             }else{
                 self.ShowAlert(message: "\(json)")
@@ -369,16 +423,17 @@ extension UploadPhotoVC{
         
         if isStartTime ?? true{
             self.startTimeTF.text =  datePicker.date.toString("hh: mm a")
+            UploadSession.startHours = datePicker.date.toString("hh: mm a")
         }else{
             
             
-            if datePicker.date.time ==  Time(getDate(from: self.startTimeTF.text ?? "")){
-                self.endTimeTF.text =  datePicker.date.toString("hh: mm a")
-                return
-            }
+//            if datePicker.date.time ==  Time(getDate(from: self.startTimeTF.text ?? "")){
+//                self.endTimeTF.text =  datePicker.date.toString("hh: mm a")
+//                return
+//            }
             self.endTimeTF.text =  datePicker.date.toString("hh: mm a")
-                
-            
+            UploadSession.endHours = datePicker.date.toString("hh: mm a")
+ 
         }
         
     }

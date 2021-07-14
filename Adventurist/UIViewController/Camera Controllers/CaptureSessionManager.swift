@@ -483,8 +483,12 @@ AVCaptureAudioDataOutputSampleBufferDelegate {
     private override init() {
         super.init()
         setCaptureSession()
-        setAndEmitCameraSettings(self.captureDevice!)
-        setObservers()
+        if captureDevice != nil{
+            setAndEmitCameraSettings(self.captureDevice)
+            setObservers()
+        }else{return}
+        
+        
     }
 
     private func setObservers() {
@@ -924,9 +928,7 @@ AVCaptureAudioDataOutputSampleBufferDelegate {
     @objc func onImageSaved(_ savedImage: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafeRawPointer) {
         if error == nil {
             //coz you need to run UIKit opeartions on main thread
-            
-            
-       
+
             UploadSession.imagetoUpload = savedImage
             UploadSession.shutter = String(self.shutterValue)
             UploadSession.isoSpeed = String(self.isoValue)
