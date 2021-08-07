@@ -46,9 +46,6 @@ class NetworkController {
 //                ]
 //            }
             
-            print("Body ====>  \(String(describing: parameters))")
-            print("headers ====> \( String(describing: headers))")
-            
             
             AF.request(url, method: method, parameters: (method == HTTPMethod.post) ? parameters : nil, encoding: URLEncoding.httpBody, headers: headers).responseJSON(){ response in
                 switch response.result{
@@ -152,7 +149,6 @@ class NetworkController {
                case.failure(let error):
                 self.showRequestDetailForFailure(responseObject: response, error: error as NSError)
                 let respError = JSON(error.errorDescription ?? "Undefined Error.")
-                print(respError)
                    onComplition(respError,0 )
                    break
                 }

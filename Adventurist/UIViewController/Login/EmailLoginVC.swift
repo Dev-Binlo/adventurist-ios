@@ -138,8 +138,8 @@ extension EmailLoginVC{
         
         self.addActivityLoader()
         let parameters : [String: Any] = [
-            "email" : emailTF.text!,
-            "password" : passwordTF.text!
+            "email" : emailTF.text ?? "",
+            "password" : passwordTF.text ?? ""
         ]
         
         NetworkController.shared.Service(method: .post, parameters: parameters, nameOfService: .Login, isFormData: false) { (response, status) in
@@ -147,7 +147,6 @@ extension EmailLoginVC{
             
             if status == 1{
                 //success cases
-                print(response)
                 self.defaults.removeObject(forKey: UserSession.keyLoginSession)
                 self.defaults.setValue(response.rawString(), forKey: UserSession.keyLoginSession)
                 self.defaults.synchronize()
