@@ -18,10 +18,10 @@ class NetworkController {
     static let shared = NetworkController()
     
     //FIXME: Live
-//    var baseUrl = "http://adventurist-env.eba-ksni68ph.ap-east-1.elasticbeanstalk.com/api/"
+    var baseUrl = "http://adventurist-env.eba-ksni68ph.ap-east-1.elasticbeanstalk.com/api/"
 
     //FIXME: Stg
-    var baseUrl = "http://adventurist.plandstudios.com/api/"
+//    var baseUrl = "http://adventurist.plandstudios.com/api/"
     
     /// onComplition-> JSON is json response
     ///and 0 == failed due to invalid parameters
@@ -45,9 +45,6 @@ class NetworkController {
 //                    "Accept" : (isFormData) ? "application/x-www-form-urlencoded" : "application/json",
 //                ]
 //            }
-            
-            print("Body ====>  \(String(describing: parameters))")
-            print("headers ====> \( String(describing: headers))")
             
             
             AF.request(url, method: method, parameters: (method == HTTPMethod.post) ? parameters : nil, encoding: URLEncoding.httpBody, headers: headers).responseJSON(){ response in
@@ -152,7 +149,6 @@ class NetworkController {
                case.failure(let error):
                 self.showRequestDetailForFailure(responseObject: response, error: error as NSError)
                 let respError = JSON(error.errorDescription ?? "Undefined Error.")
-                print(respError)
                    onComplition(respError,0 )
                    break
                 }

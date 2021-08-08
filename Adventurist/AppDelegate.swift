@@ -35,6 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application,
             didFinishLaunchingWithOptions: launchOptions
         )
+        
+        return true
+        /**
         if let dic = self.defaults.string(forKey: UserSession.keyLoginSession){
             if dic != ""{
                 if let json = dic.data(using: String.Encoding.utf8, allowLossyConversion: false) {
@@ -67,7 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.makeKeyAndVisible()
             }
         }
-        return true
+        return true*/
+    
     }
     func setUpNavigation() {
         

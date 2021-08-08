@@ -10,13 +10,11 @@ import UIKit
 import AVFoundation
 import Foundation
 import CoreMotion
-
 import JQSwiftIcon
-
 import Photos
-
 import ScalePicker
 import CariocaMenu
+import ZLImageEditor
 
 enum SettingMenuTypes {
     case none, cameraSliderMenu, resolutionMenu, flashMenu, allStatsMenu, miscMenu
@@ -170,13 +168,23 @@ class FirstViewController:
     
     @objc func goToUpload(_  sender: Notification){
         
-        if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: UploadPhotoVC.identifier) as? UploadPhotoVC {
-            controller.modalPresentationStyle = .fullScreen
-            self.present(controller, animated: true)
+        
+        //Send  image to image editor i-e UploadSession.imagetoupload
+        
+         ZLImageEditorConfiguration.default().editImageTools = [.filter]
+        ZLEditImageViewController.showEditImageVC(parentVC: self, image: UploadSession.imagetoUpload! ) { [weak self] (resImage, editModel) in
+             // your code
+            UploadSession.imagetoUpload =  resImage
+            DispatchQueue.main.async {
+                if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: UploadPhotoVC.identifier) as? UploadPhotoVC {
+                    controller.modalPresentationStyle = .fullScreen
+                    self!.present(controller, animated: true)
+                }
+            }
+            
         }
         
     }
-    
 
     override func didReceiveMemoryWarning() {
         print("[didReceiveMemoryWarning] memory warning happened.")

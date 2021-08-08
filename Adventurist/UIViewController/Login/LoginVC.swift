@@ -85,6 +85,12 @@ class LoginVC: UIViewController, ASAuthorizationControllerPresentationContextPro
     }
 
     @IBAction func signIn(_ sender: ButtonY){
+        /*if let tabViewController = self.storyboardMain.instantiateViewController(withIdentifier: "tabbar") as? UITabBarController {
+            tabViewController.modalPresentationStyle = .fullScreen
+            self.present(tabViewController, animated: true, completion: nil)
+        }
+        return*/
+        
         if let controller = storyboardLogin.instantiateViewController(withIdentifier: EmailLoginVC.identifier) as? EmailLoginVC {
             controller.modalPresentationStyle = .fullScreen
             self.navigationController?.pushViewController(controller, animated: true)

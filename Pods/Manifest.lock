@@ -38,6 +38,9 @@ PODS:
   - SkyFloatingLabelTextField (3.8.0)
   - SnapKit (5.0.1)
   - SwiftyJSON (5.0.0)
+  - ZLImageEditor (1.0.2):
+    - ZLImageEditor/Core (= 1.0.2)
+  - ZLImageEditor/Core (1.0.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -58,6 +61,7 @@ DEPENDENCIES:
   - SkyFloatingLabelTextField
   - SnapKit
   - SwiftyJSON
+  - ZLImageEditor
 
 SPEC REPOS:
   trunk:
@@ -76,6 +80,7 @@ SPEC REPOS:
     - SkyFloatingLabelTextField
     - SnapKit
     - SwiftyJSON
+    - ZLImageEditor
 
 EXTERNAL SOURCES:
   CariocaMenu:
@@ -132,7 +137,8 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  ZLImageEditor: eac3900c3311615e2ca6ce19987c36e07ea4e1dd
 
-PODFILE CHECKSUM: 33da13e6687beaaab87039e9d2f1058a40d39c32
+PODFILE CHECKSUM: abb31a4b3f3cb8cfa77832dbbb7ad63855cced53
 
 COCOAPODS: 1.10.1
