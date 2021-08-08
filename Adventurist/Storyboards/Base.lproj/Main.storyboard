@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1484,7 +1484,7 @@
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellLeft" rowHeight="50" id="AqG-CH-YIo" customClass="CameraMenuTableViewCell" customModule="Adventurist" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AqG-CH-YIo" id="wou-qA-7CB">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -1522,7 +1522,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellRight" rowHeight="50" id="6HI-0Q-CvV" customClass="CameraMenuTableViewCell" customModule="Adventurist" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="78" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="74.5" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6HI-0Q-CvV" id="vQ6-8X-UAH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -2554,7 +2554,7 @@
                                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_label" rowHeight="70" id="z0H-gg-XTz" customClass="LabelCell" customModule="Adventurist" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="28" width="240" height="70"/>
+                                                                <rect key="frame" x="0.0" y="24.5" width="240" height="70"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z0H-gg-XTz" id="o8U-eO-2P6">
                                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="70"/>
@@ -2627,7 +2627,7 @@
                                                                 </connections>
                                                             </tableViewCell>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_picker" rowHeight="60" id="wc6-vK-iZv" customClass="PickerCell" customModule="Adventurist" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="98" width="240" height="60"/>
+                                                                <rect key="frame" x="0.0" y="94.5" width="240" height="60"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wc6-vK-iZv" id="wcV-Un-5Lx">
                                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
