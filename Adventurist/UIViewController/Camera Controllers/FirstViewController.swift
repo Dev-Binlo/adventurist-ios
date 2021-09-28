@@ -178,7 +178,7 @@ class FirstViewController:
             DispatchQueue.main.async {
                 if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: UploadPhotoVC.identifier) as? UploadPhotoVC {
                     controller.modalPresentationStyle = .fullScreen
-                    self!.present(controller, animated: true)
+                    self?.present(controller, animated: true)
                 }
             }
             
