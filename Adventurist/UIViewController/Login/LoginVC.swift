@@ -230,7 +230,7 @@ extension LoginVC{
             
             if status == 1{
                 //success cases
-                print(response)
+                
                 if response["user"]["email"] == JSON.null{
                     self.removeActivityLoader()
                     if let controller  = self.storyboardLogin.instantiateViewController(withIdentifier: EmailAddressVC.identifier) as? EmailAddressVC{
@@ -240,8 +240,6 @@ extension LoginVC{
                     }
                     
                 }else{
-                    print("Thereee")
-                    
                     self.defaults.removeObject(forKey: UserSession.keyLoginSession)
                     self.defaults.setValue(response.rawString(), forKey: UserSession.keyLoginSession)
                     self.defaults.synchronize()

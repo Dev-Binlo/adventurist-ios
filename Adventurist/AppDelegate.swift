@@ -28,9 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarBarTintColor = .purple
         IQKeyboardManager.shared.toolbarTintColor = .white
-        GMSServices.provideAPIKey("AIzaSyDkrmNt7yLpSO4JA9k7JdzVmX3KQrvvyzg")
-        GMSPlacesClient.provideAPIKey("AIzaSyDkrmNt7yLpSO4JA9k7JdzVmX3KQrvvyzg")
+        GMSServices.provideAPIKey("AIzaSyCngcr7So65Yzky8mlEjSe43k1a103UuZo")
+        GMSPlacesClient.provideAPIKey("AIzaSyCngcr7So65Yzky8mlEjSe43k1a103UuZo")
         self.window = UIWindow(frame: UIScreen.main.bounds)
+        
         ApplicationDelegate.shared.application(
             application,
             didFinishLaunchingWithOptions: launchOptions

@@ -70,16 +70,14 @@ class EmailAddressVC: UIViewController {
         let val = validate()
         if val.0 == true{
             //Call your api here...
-            print(self.parameters)
             let  param = [
-                "social_id" : "\(self.parameters["social_id"] as! String)",
-                "first_name" : "\(self.parameters["first_name"] as! String)",
-                "last_name" : "\(self.parameters["last_name"] as! String)",
-                "email" : "\(self.emailTF.text!)",
-                "social_type" : "\(self.parameters["social_type"] as! String)",
-                "social_image" : "\(self.parameters["social_image"] as! String)",
+                "social_id" : self.parameters["social_id"] ?? "",
+                "first_name" : self.parameters["first_name"] ?? "",
+                "last_name" : self.parameters["last_name"] ?? "",
+                "email" :   self.emailTF.text ?? "",
+                "social_type" : self.parameters["social_type"] ?? "",
+                "social_image" : self.parameters["social_image"] ?? ""
             ]
-            print(param)
             SocialLogin(parameters: param)
             
         }else{
@@ -103,7 +101,6 @@ extension EmailAddressVC{
             
             if status == 1{
                 //success cases
-                print(response)
                 self.defaults.removeObject(forKey: UserSession.keyLoginSession)
                 self.defaults.setValue(response.rawString(), forKey: UserSession.keyLoginSession)
                 self.defaults.synchronize()
