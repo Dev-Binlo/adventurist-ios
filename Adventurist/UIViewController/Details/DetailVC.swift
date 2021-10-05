@@ -77,6 +77,7 @@ extension DetailVC : UITableViewDataSource, UITableViewDelegate{
                 return cell
             }else if indexPath.row == 1{
                 let cell = tableView.dequeueReusableCell(withIdentifier: TransportationTC.identifier, for: indexPath) as! TransportationTC
+                cell.ConfigureCell(data: self.details!)
                 return cell
 //            }else if indexPath.row == 2{
 //                let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTC.identifier, for: indexPath) as! WeatherTC
