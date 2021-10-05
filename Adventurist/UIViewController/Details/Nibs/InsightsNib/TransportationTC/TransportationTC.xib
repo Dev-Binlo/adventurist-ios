@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TransportationTC" rowHeight="336" id="KGk-i7-Jjw" customClass="TransportationTC" customModule="Adventurist" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="336"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TransportationTC" rowHeight="289" id="KGk-i7-Jjw" customClass="TransportationTC" customModule="Adventurist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="289"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="336"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="289"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRANSPORTATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz4-IO-ghn">
@@ -26,14 +27,8 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="nQW-UO-HHD">
-                        <rect key="frame" x="0.0" y="50" width="320" height="200"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="200" id="xC5-qf-gMh"/>
-                        </constraints>
-                    </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vG-oG-5sT">
-                        <rect key="frame" x="251" y="40" width="50" height="50"/>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vG-oG-5sT">
+                        <rect key="frame" x="250" y="40" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="0Yp-Cn-yg8"/>
                             <constraint firstAttribute="height" constant="50" id="IPI-FE-gkC"/>
@@ -41,7 +36,7 @@
                         <state key="normal" image="go_icon"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22°19'26.4&quot;N 114°10'" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y79-QU-k5I">
-                        <rect key="frame" x="16" y="258" width="288" height="18"/>
+                        <rect key="frame" x="16" y="252" width="288" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="prI-5B-8jU"/>
                         </constraints>
@@ -49,14 +44,8 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get navigation now by pressing the Go Button given above" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mid-8T-aiH">
-                        <rect key="frame" x="16" y="284" width="288" height="39"/>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSW-28-syn">
-                        <rect key="frame" x="0.0" y="335" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="286" width="320" height="1"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="uqT-ht-UNe"/>
@@ -65,34 +54,44 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVP-Wl-Yvi" customClass="GMSMapView">
+                        <rect key="frame" x="0.0" y="58" width="320" height="182"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="182" id="Xy2-6C-oSV"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="XVP-Wl-Yvi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4Rq-Ja-QXC"/>
                     <constraint firstItem="y79-QU-k5I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="7FD-Lm-v51"/>
-                    <constraint firstItem="Mid-8T-aiH" firstAttribute="top" secondItem="y79-QU-k5I" secondAttribute="bottom" constant="8" id="8dV-1F-DsC"/>
+                    <constraint firstItem="y79-QU-k5I" firstAttribute="top" secondItem="XVP-Wl-Yvi" secondAttribute="bottom" constant="12" id="7G0-59-4uo"/>
                     <constraint firstAttribute="trailing" secondItem="y79-QU-k5I" secondAttribute="trailing" constant="16" id="AN5-wj-mhw"/>
                     <constraint firstItem="9vG-oG-5sT" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-4" id="D9p-G4-p0a"/>
                     <constraint firstAttribute="trailing" secondItem="gSW-28-syn" secondAttribute="trailing" id="DCy-Lm-n6Y"/>
-                    <constraint firstItem="nQW-UO-HHD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fs1-E6-MtE"/>
-                    <constraint firstAttribute="trailing" secondItem="nQW-UO-HHD" secondAttribute="trailing" id="QeA-65-FbM"/>
+                    <constraint firstAttribute="trailing" secondItem="XVP-Wl-Yvi" secondAttribute="trailing" id="PRA-lX-b2N"/>
                     <constraint firstItem="gSW-28-syn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RIF-hL-sQe"/>
+                    <constraint firstItem="gSW-28-syn" firstAttribute="top" secondItem="y79-QU-k5I" secondAttribute="bottom" constant="16" id="Szw-j3-KfH"/>
+                    <constraint firstItem="XVP-Wl-Yvi" firstAttribute="top" secondItem="dz4-IO-ghn" secondAttribute="bottom" constant="8" symbolic="YES" id="X9J-WN-YL4"/>
                     <constraint firstItem="dz4-IO-ghn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Zpy-H1-y7M"/>
                     <constraint firstAttribute="bottom" secondItem="gSW-28-syn" secondAttribute="bottom" id="aFg-co-5LQ"/>
-                    <constraint firstItem="nQW-UO-HHD" firstAttribute="top" secondItem="dz4-IO-ghn" secondAttribute="bottom" id="hC1-mZ-l8M"/>
                     <constraint firstItem="9vG-oG-5sT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="29" id="hFB-5J-tVC"/>
                     <constraint firstAttribute="trailing" secondItem="dz4-IO-ghn" secondAttribute="trailing" id="isI-zv-1w8"/>
-                    <constraint firstItem="Mid-8T-aiH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ldT-yq-ihV"/>
-                    <constraint firstItem="y79-QU-k5I" firstAttribute="top" secondItem="nQW-UO-HHD" secondAttribute="bottom" constant="8" id="mci-ZX-UAS"/>
                     <constraint firstItem="dz4-IO-ghn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nD5-Vi-l4X"/>
-                    <constraint firstAttribute="trailing" secondItem="Mid-8T-aiH" secondAttribute="trailing" constant="16" id="ugH-H4-ZwW"/>
-                    <constraint firstItem="gSW-28-syn" firstAttribute="top" secondItem="Mid-8T-aiH" secondAttribute="bottom" constant="12" id="yeD-TR-3VN"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="131.25" y="31.690140845070424"/>
+            <connections>
+                <outlet property="latLngLbl" destination="y79-QU-k5I" id="WW1-xp-8DY"/>
+                <outlet property="viewGMap" destination="XVP-Wl-Yvi" id="qln-7F-o2N"/>
+            </connections>
+            <point key="canvasLocation" x="131.25" y="6.8661971830985919"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="go_icon" width="800" height="800"/>
-        <image name="map" width="1722" height="996"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

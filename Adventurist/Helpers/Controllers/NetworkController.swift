@@ -98,9 +98,9 @@ class NetworkController {
                 "Authorization": "Bearer \(UserSession.loginSession?.token! ?? "")",
             ]
             
-            print("=============>>>>>>> Parameters{ \n \(params) \n }")
-            print("=============>>>>>>> Headers{ \n \(headers) \n }")
-            
+//            print("=============>>>>>>> Parameters{ \n \(params) \n }")
+//            print("=============>>>>>>> Headers{ \n \(headers) \n }")
+//            
             view?.addActivityLoader()
             AF.upload(multipartFormData: { (multiPart) in
                 
@@ -109,7 +109,7 @@ class NetworkController {
                 }
                 
                 if let  image  = imageFile{
-                    multiPart.append(image.jpegData(compressionQuality: 1.0) ?? Data(), withName: "image", fileName: "adventurist_\(Date().timeIntervalSince1970).png", mimeType: "image/png")
+                    multiPart.append(image.jpegData(compressionQuality: 0.5) ?? Data(), withName: "image", fileName: "adventurist_\(Date().timeIntervalSince1970).png", mimeType: "image/png")
                 }
                                 
             }, to: url, usingThreshold: UInt64.init(), method: .post, headers: headers).uploadProgress { (progress) in

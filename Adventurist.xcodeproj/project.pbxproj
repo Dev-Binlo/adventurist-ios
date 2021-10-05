@@ -28,6 +28,7 @@
 		79748F9525245A9F00C4D299 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79748F9425245A9F00C4D299 /* Date.swift */; };
 		79748F972524658800C4D299 /* RPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79748F962524658800C4D299 /* RPicker.swift */; };
 		79748F992524744A00C4D299 /* PicturesNearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79748F982524744A00C4D299 /* PicturesNearby.swift */; };
+		798469EE2709980000060832 /* Pods_Adventurist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB55E50D3C5C537B65E3324E /* Pods_Adventurist.framework */; };
 		7989DB242525A9F800F4D255 /* EditAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7989DB232525A9F800F4D255 /* EditAccountVC.swift */; };
 		79AF1E4E263DEE040075A18E /* ProgressLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF1E4D263DEE040075A18E /* ProgressLoader.swift */; };
 		79AF1E51263DEE220075A18E /* ProgressLoader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AF1E50263DEE220075A18E /* ProgressLoader.xib */; };
@@ -125,7 +126,6 @@
 		79C00597251DD1E60056D6D9 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C00539251DD1E60056D6D9 /* ResetPasswordVC.swift */; };
 		79C00599251DD1E60056D6D9 /* ForgotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C0053B251DD1E60056D6D9 /* ForgotVC.swift */; };
 		79C0059C251DD2280056D6D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C0059B251DD2280056D6D9 /* Assets.xcassets */; };
-		E8BAEF31A6178343A286B379 /* Pods_Adventurist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB55E50D3C5C537B65E3324E /* Pods_Adventurist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -260,7 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8BAEF31A6178343A286B379 /* Pods_Adventurist.framework in Frameworks */,
+				798469EE2709980000060832 /* Pods_Adventurist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1176,7 +1176,7 @@
 				CODE_SIGN_ENTITLEMENTS = Adventurist/Adventurist.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 5265G52HC4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Adventurist/Resources/Info.plist";
@@ -1200,9 +1200,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Adventurist/Adventurist.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CODE_SIGN_IDENTITY = "Apple Distribution: ALPHASTARK Ltd. (5265G52HC4)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 5265G52HC4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Adventurist/Resources/Info.plist";
@@ -1214,7 +1214,7 @@
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alphastark.Adventurist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Adventurist_Distribution_Profile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
